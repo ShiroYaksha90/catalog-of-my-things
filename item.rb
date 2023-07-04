@@ -12,12 +12,11 @@ class Item
     @archived = false
   end
 
-  def move_to_archived 
+  def move_to_archived
     @archived = true if can_be_archived?
   end
 
   def can_be_archived?
     true if (Date.today.year - Date.parse(@publish_date).year) > 10
   end
-
 end
