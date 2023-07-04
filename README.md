@@ -2,8 +2,8 @@
 
 <!--
 !!! IMPORTANT !!!
-This README is an example of how you could professionally present your codebase. 
-Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
+This README is an example of how you could professionally present your codebase.
+Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored.
 
 You should modify this file to match your project and remove sections that don't apply.
 
@@ -219,6 +219,12 @@ Example:
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Mahabub Alam**
+
+- GitHub: [@mahabubx7](https://github.com/mahabubx7)
+- Twitter: [@mahabub\_\_7](https://twitter.com/mahabub__7)
+- LinkedIn: [in/mahabubx7](https://linkedin.com/in/mahabubx7)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
