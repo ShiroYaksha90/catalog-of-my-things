@@ -216,9 +216,9 @@ Example:
 
 👤 **Ouail Laarabi**
  
- - GitHub: [Click here](https://github.com/Ouail-01?tab=overview&from=2023-01-01&to=2023-01-02)
- - Twitter: [Click here](https://twitter.com/Ouail_Laarabi)
- - LinkedIn: [Click here](https://www.linkedin.com/in/ouail-laarabi-53203b250/)
+ - GitHub: [@Ouail-01](https://github.com/Ouail-01?tab=overview&from=2023-01-01&to=2023-01-02)
+ - Twitter: [@Ouail_Laarabi](https://twitter.com/Ouail_Laarabi)
+ - LinkedIn: [Ouail Laarabi](https://www.linkedin.com/in/ouail-laarabi-53203b250/)
 
 👤 **Mahabub Alam**
 
