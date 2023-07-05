@@ -30,4 +30,10 @@ def add_game
 
   puts 'What is the last played date? [YYYY-MM-DD]'
   last_played_at = DateTime.parse(gets.chomp).to_date
+
+  # create the game
+  game = Game.new(publish_date, multiplayer, last_played_at)
+  @games.push(game)
+  save_game(publish_date, multiplayer, last_played_at)
+
 end
