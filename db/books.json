@@ -1,0 +1,20 @@
+[
+  {
+    "id": 367,
+    "publisher": "@pub",
+    "published_at": "2023-07-05",
+    "cover_state": "OOP with Ruby"
+  },
+  {
+    "id": 158,
+    "publisher": "@rails",
+    "published_at": "2023-07-05",
+    "cover_state": "RoR guidelines"
+  },
+  {
+    "id": 178,
+    "publisher": "microverse",
+    "published_at": "2023-02-10",
+    "cover_state": "path to swe"
+  }
+]
