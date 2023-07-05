@@ -23,10 +23,24 @@ class ListAlbumsAndGenre
     input_genre = Genre.new(albume_genre)
     input_genre.add_item(music_album)
     @music_albums << music_album
-    render_message("The album: #{music_album.name} was added successfully")
-    render_message("Genre: #{input_genre.name} ")
-    render_message("publish year: #{music_album.publish_date}")
-    render_message("Spotify: #{music_album.on_spotify}")
+    # render_message("The album: #{music_album.name} was added successfully")
+    # render_message("Genre: #{input_genre.name} ")
+    # render_message("publish year: #{music_album.publish_date}")
+    # render_message("Spotify: #{music_album.on_spotify}")
+  end
+
+  def list_albums
+    # music_album=@music_albums
+    @music_albums.each_with_index do |album, index| 
+        p "#{index + 1}) Album: #{album.name}"
+    end
+  end
+
+  def list_genre
+    # music_album =
+    @music_albums.each_with_index do |genre, index|
+        p "#{index + 1}) Genre: #{genre.genre}"
+    end
   end
 
   def render_message(message)
@@ -35,3 +49,8 @@ class ListAlbumsAndGenre
     p '--' * 10
   end
 end
+
+# li=ListAlbumsAndGenre.new
+# li.create_music_album
+# li.list_albums
+# li.list_genre
