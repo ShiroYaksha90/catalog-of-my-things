@@ -31,15 +31,15 @@ class ListAlbumsAndGenre
 
   def list_albums
     # music_album=@music_albums
-    @music_albums.each_with_index do |album, index| 
-        p "#{index + 1}) Album: #{album.name}"
+    @music_albums.each_with_index do |album, index|
+      p "#{index + 1}) Album: #{album.name}"
     end
   end
 
   def list_genre
     # music_album =
     @music_albums.each_with_index do |genre, index|
-        p "#{index + 1}) Genre: #{genre.genre}"
+      p "#{index + 1}) Genre: #{genre.genre}"
     end
   end
 
