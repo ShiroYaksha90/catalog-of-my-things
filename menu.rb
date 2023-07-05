@@ -9,7 +9,7 @@ class Menu
 
     when 4
       puts '---> List All Games <-----'
-      #list_books(app)
+      #list_books(app) 
 
     when 6
       puts '---> List All Labels <-----'
@@ -17,7 +17,7 @@ class Menu
     
     when 7
       puts '---> List All Authors <-----'
-      #list_labels(app)
+      #list_labels(app) 
 
     when 9
       puts '---> Add new book <-----'
@@ -25,7 +25,7 @@ class Menu
     
     when 12
       puts '---> Add a game <-----'
-      #add_book(app)
+      #add_book(app) 
 
     when 0
       puts 'Quit...!'
