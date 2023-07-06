@@ -1,4 +1,7 @@
 require_relative 'helpers/manage_books'
+require_relative 'helpers/add_game'
+require_relative 'helpers/list_author'
+require_relative 'helpers/list_games'
 
 class Menu
   def manage_options(int_num, app)
@@ -9,7 +12,8 @@ class Menu
 
     when 4
       puts '---> List All Games <-----'
-      #list_books(app) 
+      list_games(app)
+      #run
 
     when 6
       puts '---> List All Labels <-----'
@@ -17,7 +21,8 @@ class Menu
     
     when 7
       puts '---> List All Authors <-----'
-      #list_labels(app) 
+      list_authors(app)
+      #run
 
     when 9
       puts '---> Add new book <-----'
@@ -25,7 +30,8 @@ class Menu
     
     when 12
       puts '---> Add a game <-----'
-      #add_book(app) 
+      add_game(app)
+      #run
 
     when 0
       puts 'Quit...!'

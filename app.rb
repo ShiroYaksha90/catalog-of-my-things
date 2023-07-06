@@ -1,9 +1,12 @@
 require_relative 'menu'
 require_relative 'helpers/manage_books'
 require_relative 'helpers/add_game'
+require_relative 'helpers/list_author'
+require_relative 'helpers/list_games'
+require_relative './db/preserve_game_data'
 
 class App
-  attr_accessor :books, :labels, :games
+  attr_accessor :books, :labels, :games, :authors
 
   def initialize
     @books = []
@@ -13,9 +16,15 @@ class App
     @menu = Menu.new
   end
 
+  # def load_data
+  #   load_games
+  #   load_author
+  # end
+
   def load_data(app)
     puts '---> Loading data ... <---'
     load_books(app)
+    #load_games(app)
   end
 
   def save_exit(app)
