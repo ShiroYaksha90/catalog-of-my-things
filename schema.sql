@@ -1,5 +1,18 @@
 CREATE DATABASE my_catalogs;
 
+------------ Item table ----------------
+CREATE TABLE item (
+    id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    genre_id INTEGER NOT NULL,
+    author_id INTEGER NOT NULL,
+    label_id INTEGER NOT NULL,
+    publish_date DATE NOT NULL,
+    archived BOOLEAN NOT NULL DEFAULT FALSE,
+    FOREIGN KEY (author_id) REFERENCES author (id),
+    FOREIGN KEY (label_id) REFERENCES labels (id),
+    FOREIGN KEY (genre_id) REFERENCES genres (id)
+);
+
 -- Label Entity
 CREATE TABLE IF NOT EXISTS labels (
   id int generated always  as identity primary key,
