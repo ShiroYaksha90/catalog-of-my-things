@@ -18,3 +18,5 @@ CREATE TABLE IF NOT EXISTS books (
   publish_date date,
   CONSTRAINT fk_label FOREIGN KEY (label_id) REFERENCES label(id)
 );
+
+CREATE INDEX books_label_index ON books (label_id);
