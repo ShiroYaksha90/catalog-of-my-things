@@ -13,9 +13,9 @@ def load_games(app)
       games = JSON.parse(File.read('./db/games.json'))
 
       games.each do |game|
-        #game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
+        # game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
         app.games << Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
-        #@games << game
+        # @games << game
       end
     end
     file.close
@@ -32,9 +32,9 @@ def load_author(app)
       authors = JSON.parse(File.read('./db/authors.json'))
 
       authors.each do |author|
-        #author = Author.new(author['first_name'], author['last_name'])
+        # author = Author.new(author['first_name'], author['last_name'])
         app.authors << Author.new(author['first_name'], author['last_name'])
-        #@authors << author
+        # @authors << author
       end
     end
     file.close

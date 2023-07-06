@@ -19,11 +19,6 @@ class App
     @menu = Menu.new
   end
 
-  # def load_data
-  #   load_games
-  #   load_author
-  # end
-
   def load_data(app)
     puts '---> Loading data ... <---'
     load_books(app)
@@ -36,7 +31,7 @@ class App
     puts '---> Saving states <---'
     save_book(app)
     save_album(app)
-    #save_book(app)
+    save_games(app)
   end
 
   def run(app)

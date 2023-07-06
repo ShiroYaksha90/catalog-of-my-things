@@ -13,7 +13,7 @@ describe Author do
     end
 
     it 'initializes with an empty collection of items' do
-        expect(author.items).to be_empty
+      expect(author.items).to be_empty
     end
   end
 end
