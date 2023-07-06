@@ -37,10 +37,7 @@ def save_game(publish_date, multiplayer, last_played_at)
          end
 
   game << obj
-
-  File.open('./db/games.json', 'w') do |file|
-    file.write(JSON.pretty_generate(game))
-  end
+  File.write('./db/games.json', JSON.pretty_generate(game))
 end
 
 def save_author(first_name, last_name)
@@ -56,8 +53,5 @@ def save_author(first_name, last_name)
            end
 
   author << obj
-
-  File.open('./db/authors.json', 'w') do |file|
-    file.write(JSON.pretty_generate(author))
-  end
+  File.write('./db/authors.json', JSON.pretty_generate(author))
 end
