@@ -4,40 +4,22 @@ require_relative '../classes/author'
 require_relative '../app'
 
 def load_games(app)
-  if File.exist?('./db/games.json')
-    file = File.open('./db/games.json')
+  return 'There is nothing saved yet.' unless File.exist?('./db/games.json')
 
-    if file.size.zero?
-      'There is nothing saved yet.'
-    else
-      games = JSON.parse(File.read('./db/games.json'))
+  games = JSON.parse(File.read('./db/games.json'))
 
-      games.each do |game|
-        # game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
-        app.games << Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
-        # @games << game
-      end
-    end
-    file.close
+  games.each do |game|
+    app.games << Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
   end
 end
 
 def load_author(app)
-  if File.exist?('./db/authors.json')
-    file = File.open('./db/authors.json')
+  return 'There is nothing saved yet.' unless File.exist?('./db/authors.json')
 
-    if file.size.zero?
-      'There is nothing saved yet.'
-    else
-      authors = JSON.parse(File.read('./db/authors.json'))
+  authors = JSON.parse(File.read('./db/authors.json'))
 
-      authors.each do |author|
-        # author = Author.new(author['first_name'], author['last_name'])
-        app.authors << Author.new(author['first_name'], author['last_name'])
-        # @authors << author
-      end
-    end
-    file.close
+  authors.each do |author|
+    app.authors << Author.new(author['first_name'], author['last_name'])
   end
 end
 
@@ -48,21 +30,16 @@ def save_game(publish_date, multiplayer, last_played_at)
     last_played_at: last_played_at
   }
 
-  if File.exist?('./db/games.json')
-    file = File.open('./db/games.json')
+  game = if File.exist?('./db/games.json')
+           JSON.parse(File.read('./db/games.json'))
+         else
+           []
+         end
 
-    if file.size.zero?
-      game = [obj]
-    else
-      game = JSON.parse(File.read('./db/games.json'))
-      game << obj
-    end
+  game << obj
 
-    file.close
-
-    myfile = File.open('./db/games.json', 'w')
-    myfile.write(JSON.pretty_generate(game))
-    myfile.close
+  File.open('./db/games.json', 'w') do |file|
+    file.write(JSON.pretty_generate(game))
   end
 end
 
@@ -72,20 +49,15 @@ def save_author(first_name, last_name)
     last_name: last_name
   }
 
-  if File.exist?('./db/authors.json')
-    file = File.open('./db/authors.json')
+  author = if File.exist?('./db/authors.json')
+             JSON.parse(File.read('./db/authors.json'))
+           else
+             []
+           end
 
-    if file.size.zero?
-      author = [obj]
-    else
-      author = JSON.parse(File.read('./db/authors.json'))
-      author << obj
-    end
+  author << obj
 
-    file.close
-
-    myfile = File.open('./db/authors.json', 'w')
-    myfile.write(JSON.pretty_generate(author))
-    myfile.close
+  File.open('./db/authors.json', 'w') do |file|
+    file.write(JSON.pretty_generate(author))
   end
 end

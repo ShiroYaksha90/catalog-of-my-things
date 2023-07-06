@@ -4,7 +4,7 @@ require_relative 'helpers/manage_albums'
 require_relative 'helpers/add_game'
 require_relative 'helpers/list_author'
 require_relative 'helpers/list_games'
-require_relative './db/preserve_game_data'
+require_relative 'db/preserve_game_data'
 
 class App
   attr_accessor :books, :labels, :albums, :genres, :games, :authors

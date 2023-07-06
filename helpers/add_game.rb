@@ -33,13 +33,11 @@ def add_game(app)
   # create the game
   game = Game.new(publish_date, multiplayer, last_played_at)
   app.games << game
-  # @games.push(game)
   save_game(publish_date, multiplayer, last_played_at)
 
   # create the author
   author = Author.new(first_name, last_name)
   app.authors << author
-  # @authors.push(author)
   save_author(first_name, last_name)
 
   puts 'GAME AND AUTHOR CREATED SUCCESSFULLY'
