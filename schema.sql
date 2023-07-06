@@ -20,3 +20,23 @@ CREATE TABLE IF NOT EXISTS books (
 );
 
 CREATE INDEX books_label_index ON books (label_id);
+
+------------ Music album table ----------------
+CREATE TABLE music_albums (
+  id SERIAL PRIMARY KEY,
+  publish_date DATE NOT NULL DEFAULT DATE,
+  on_spotify BOOLEAN,
+  archived BOOLEAN,
+  genre_id INT,
+  label_id INT,
+  author_id INT,
+  CONSTRAINT fk_genre FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
+  PRIMARY KEY(id)
+);
+
+------------ Genre table -------------------
+CREATE TABLE genres (
+  genre_id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  PRIMARY KEY(genre_id)
+);
