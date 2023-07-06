@@ -1,10 +1,11 @@
 require_relative '../classes/games'
 
-@games = []
-
-def list_games
-  puts 'GAMES'
-  @games.each do |game|
-    puts "Publish Date: #{game.publish_date}, Multiplayer: #{game.multiplayer}, Last Played: #{game.last_played_at}"
+def list_games(app)
+  app.games.each do |game|
+    puts '------------------------------'
+    puts "Publish Date: #{game.publish_date} "
+    puts "Multiplayer: #{game.multiplayer} "
+    puts "Last Played: #{game.last_played_at}"
+    puts '------------------------------'
   end
 end

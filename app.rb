@@ -24,12 +24,14 @@ class App
   def load_data(app)
     puts '---> Loading data ... <---'
     load_books(app)
-    #load_games(app)
+    load_games(app)
+    load_author(app)
   end
 
   def save_exit(app)
     puts '---> Saving states <---'
     save_book(app)
+    #save_book(app)
   end
 
   def run(app)

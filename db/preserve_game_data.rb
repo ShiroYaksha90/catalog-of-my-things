@@ -3,7 +3,7 @@ require_relative '../classes/games'
 require_relative '../classes/author'
 require_relative '../app'
 
-def load_games
+def load_games(app)
   if File.exist?('./db/games.json')
     file = File.open('./db/games.json')
 
@@ -13,15 +13,16 @@ def load_games
       games = JSON.parse(File.read('./db/games.json'))
 
       games.each do |game|
-        game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
-        @games << game
+        #game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
+        app.games << Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
+        #@games << game
       end
     end
     file.close
   end
 end
 
-def load_author
+def load_author(app)
   if File.exist?('./db/authors.json')
     file = File.open('./db/authors.json')
 
@@ -31,8 +32,9 @@ def load_author
       authors = JSON.parse(File.read('./db/authors.json'))
 
       authors.each do |author|
-        author = Author.new(author['first_name'], author['last_name'])
-        @authors << author
+        #author = Author.new(author['first_name'], author['last_name'])
+        app.authors << Author.new(author['first_name'], author['last_name'])
+        #@authors << author
       end
     end
     file.close
