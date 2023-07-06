@@ -25,9 +25,9 @@ end
 
 def save_game(publish_date, multiplayer, last_played_at)
   obj = {
-    publish_date:,
-    multiplayer:,
-    last_played_at:
+    'publish_date' => publish_date,
+    'multiplayer' => multiplayer,
+    'last_played_at' => last_played_at
   }
 
   game = if File.exist?('./db/games.json')
@@ -42,8 +42,8 @@ end
 
 def save_author(first_name, last_name)
   obj = {
-    first_name:,
-    last_name:
+    'first_name' => first_name,
+    'last_name' => last_name
   }
 
   author = if File.exist?('./db/authors.json')
