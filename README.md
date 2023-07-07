@@ -67,7 +67,6 @@ Clone this repository to your desired folder:
 ```sh
 cd my-folder
 git clone https://github.com/ShiroYaksha90/catalog-of-my-things.git
-
 ```
 
 ### Install
@@ -77,6 +76,16 @@ To run the project, execute the folllowing in a terminal.
 ```sh
 cd my-project
 gem install
+bundle install
+```
+
+### Test
+```sh
+rspec
+```
+
+### Run the app
+```sh
 ruby main.rb
 ```
 
