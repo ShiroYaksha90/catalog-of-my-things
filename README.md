@@ -4,6 +4,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Catalog-Of-My-Things ](#-oop-school-library-)
+  - [Presentation ](#presentation)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -23,6 +24,10 @@
 # 📖 Catalog-Of-My-Things <a name="about-project"></a>
 
 Catalog-Of-My-Things is a project that allows users to perform various actions, such as adding and listing books, music albums and games. It implements associations and aggregations between classes, defines properties and methods, and includes unit tests for the implemented functionality. Data is preserved by saving collections in JSON files, and a corresponding database schema is provided for future data storage.
+
+## Presentation <a name="presentation"></a>
+
+- [Presentation Video](https://drive.google.com/file/d/1Be_UywdGGWgsplI0IWwfizoTgWkOwHLI/view?usp=sharing)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -72,6 +77,7 @@ To run the project, execute the folllowing in a terminal.
 ```sh
 cd my-project
 gem install
+ruby main.rb
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
