@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Learn OOP",
+    "color": "red"
+  },
+  {
+    "title": "Learn Ruby on Rails",
+    "color": "red"
+  },
+  {
+    "title": "Become an SWE",
+    "color": "green"
+  }
+]

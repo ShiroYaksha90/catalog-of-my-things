@@ -1,0 +1,16 @@
+[
+  {
+    "id": 114,
+    "album_name": "Kamakazi",
+    "publish_date": "5-10-2020",
+    "genre": "#<Genre:0x000002531bddb790>",
+    "on_spotify": "y"
+  },
+  {
+    "id": 399,
+    "album_name": "Get rich or die trying",
+    "publish_date": "3-5-2005",
+    "genre": "#<Genre:0x000002531bdda750>",
+    "on_spotify": "n"
+  }
+]
